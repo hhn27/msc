@@ -58,7 +58,7 @@ body {
 }
 .link a:last-child {
   color: var(--PRIMARY-blue-500);
-  font-family: ProximaNovaB;
+  font-family: ProximaNovaSB;
   font-size: 1rem;
   font-style: normal;
   font-weight: 700;
