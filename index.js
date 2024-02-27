@@ -20,7 +20,7 @@ function showNextSlide() {
   }
 }
 
-setInterval(showNextSlide, 2000);
+setInterval(showNextSlide, 5000);
 
 const sliderF = document.getElementById("silderF");
 function leftSliderF() {
@@ -41,11 +41,11 @@ function showNextSlideF() {
   if (sliderF.scrollLeft + sliderF.clientWidth >= sliderF.scrollWidth) {
     sliderF.scrollLeft = 0;
   } else {
-    sliderF.scrollLeft += 400;
+    sliderF.scrollLeft += 350;
   }
 }
 
-setInterval(showNextSlideF, 1000);
+setInterval(showNextSlideF, 5000);
 
 document.addEventListener("DOMContentLoaded", function () {
   const headersSM = document.querySelectorAll(".headerSM");

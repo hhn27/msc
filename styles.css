@@ -1,10 +1,23 @@
+@font-face {
+  font-family: ProximaNovaR;
+  src: url("./assets/font/ProximaNovaRegularvh.ttf");
+}
+@font-face {
+  font-family: ProximaNovaB;
+  src: url("./assets/font/ProximaNovaBoldvh.ttf");
+}
+@font-face {
+  font-family: ProximaNovaSB;
+  src: url("./assets/font/ProximaNovaSemiboldvh.ttf");
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: ProximaNovaR;
 }
+
 html {
   font-size: 1vw;
 }
@@ -39,9 +52,11 @@ html {
 }
 .link1 {
   color: #6186bc;
+  font-family: ProximaNovaR;
 }
 .link2 {
   color: #134a9b;
+  font-family: ProximaNovaB;
 }
 
 .title h1 {
@@ -52,9 +67,11 @@ html {
   line-height: 120%;
   letter-spacing: -0.03rem;
   color: #134a9b;
+  font-family: ProximaNovaB;
 }
 .title p {
   font-size: 1.5rem;
+  font-family: ProximaNovaR;
   text-align: justify;
   font-style: normal;
   font-weight: 600;
@@ -64,9 +81,9 @@ html {
 }
 .titleBot {
   color: #fff8f8;
-  font-family: "Proxima Nova";
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #d9524d;
+  font-family: ProximaNovaB;
   font-size: 7.7995rem;
   font-style: normal;
   font-weight: 700;
@@ -90,6 +107,7 @@ html {
     ),
     #fff;
   padding-top: 7.42rem;
+  font-family: ProximaNovaSB;
 }
 .desTop {
   display: flex;
@@ -277,6 +295,7 @@ html {
 .service .serTitle h3 {
   color: #fff;
   text-align: center;
+  font-family: ProximaNovaSB;
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 600;
@@ -284,6 +303,7 @@ html {
 }
 .service .serTitle h1 {
   color: #fff;
+  font-family: ProximaNovaB;
   text-align: center;
   font-size: 3rem;
   font-style: normal;
@@ -406,6 +426,7 @@ html {
   height: 100%;
   display: flex;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .advisory .listAdv {
@@ -415,6 +436,7 @@ html {
 }
 .listAdv .first {
   padding: 0.46rem;
+  color: white;
   text-align: center;
   background: linear-gradient(
     172deg,
@@ -454,7 +476,7 @@ html {
   letter-spacing: -0.03rem;
 }
 .share {
-  padding: 4.38rem 6.38rem;
+  padding: 6.06rem 6.37rem;
 }
 .shareTitle {
   display: flex;
@@ -670,7 +692,8 @@ html {
   column-gap: 5rem;
 }
 .formRight {
-  width: 100%;
+  width: 75%;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -698,6 +721,12 @@ html {
   justify-content: space-between;
   row-gap: 1.25rem;
 }
+.formLeft {
+  display: flex;
+  width: 35%;
+  align-items: center;
+  justify-content: center;
+}
 .formLeft img {
   width: 100%;
   height: auto;
@@ -715,6 +744,7 @@ html {
   width: 100%;
   padding: 0.75rem 1.25rem;
   background: #fff8f8;
+  padding-right: 3rem;
   border-radius: 999px;
   border: none;
 }
@@ -776,7 +806,7 @@ html {
   background-color: #d9524d;
 }
 .more {
-  padding: 4.38rem 6.38rem;
+  padding: 1.38rem 6.38rem;
 }
 .moreTitle {
   display: flex;
@@ -922,13 +952,14 @@ html {
 .card {
   flex-basis: 25%;
 }
+
 @media only screen and (max-width: 768px) {
   html {
     font-size: medium;
   }
   .banner {
     background-image: url("./assets/img/bgBannerMb.jpg");
-    height: 70vh;
+    height: 80vh;
     padding: 1.25rem 1.13rem;
   }
   .link1 {
@@ -951,11 +982,11 @@ html {
     margin-top: 2.13rem;
   }
   .titleBot {
-    left: 10%;
+    left: 30%;
     bottom: -1.6rem;
     color: #fff8f8;
     text-align: center;
-    -webkit-text-stroke-width: 0.7836107611656189;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #d9524d;
     font-size: 3.05588rem;
     font-style: normal;
@@ -982,7 +1013,7 @@ html {
   }
   .desTop {
     flex-direction: column;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
   .circle {
     display: none;
@@ -1172,7 +1203,7 @@ html {
     top: 2rem;
   }
   .advisory {
-    padding: 1rem 1rem;
+    padding: 3.44rem 1rem;
   }
   .advisoryTitle span {
     color: #134a9b;
@@ -1198,7 +1229,7 @@ html {
     display: none;
   }
   .share {
-    padding: 1rem;
+    padding: 5.44rem 1rem;
   }
   .containerContent {
     width: 100%;
@@ -1222,6 +1253,7 @@ html {
   .detail {
     width: 100%;
     padding: 0;
+    font-family: ProximaNovaB;
   }
   .buttons {
     justify-content: center;
@@ -1286,7 +1318,6 @@ html {
   }
   .formRight h1 {
     color: #b54440;
-    font-family: "Proxima Nova";
     font-size: 2rem;
     font-style: normal;
     font-weight: 700;
@@ -1315,16 +1346,18 @@ html {
   }
   .moreTitle span:first-child {
     color: #1ab7da;
-    font-family: "Proxima Nova vh";
     font-size: 0.875rem;
     font-style: normal;
     font-weight: 600;
     line-height: 120%; /* 1.05rem */
     text-transform: uppercase;
   }
+  .detailFormRightBtn button:last-child {
+    background-color: #fde6e6;
+    border: none;
+  }
   .moreF h1 {
     color: #f15b55;
-    font-family: "Proxima Nova";
     font-size: 2rem;
     font-style: normal;
     font-weight: 700;
@@ -1336,5 +1369,71 @@ html {
   }
   .containerMore {
     width: 100%;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .halfLeftItem1 {
+    left: -18rem;
+    top: 2rem;
+  }
+  .halfLeftItem2 {
+    left: -18rem;
+    top: 40%;
+  }
+  .halfLeftItem3 {
+    left: -15rem;
+    bottom: 2rem;
+  }
+  .halfRightItem1 {
+    right: -18rem;
+    top: 2rem;
+  }
+  .halfRightItem2 {
+    right: -18rem;
+    top: 40%;
+  }
+  .halfRightItem3 {
+    right: -15rem;
+    bottom: 2rem;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .halfRight img {
+    width: 4rem;
+    height: 4rem;
+  }
+  .halfLeft img {
+    width: 4rem;
+    height: 4rem;
+  }
+  .halfLeftItem1 {
+    left: -18rem;
+    top: 2rem;
+  }
+  .halfLeftItem2 {
+    left: -18rem;
+    top: 45%;
+  }
+  .halfLeftItem3 {
+    left: -15rem;
+    bottom: 2rem;
+  }
+  .halfRightItem1 {
+    right: -18rem;
+    top: 2rem;
+  }
+  .halfRightItem2 {
+    right: -18rem;
+    top: 45%;
+  }
+  .halfRightItem3 {
+    right: -15rem;
+    bottom: 2rem;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .titleBot {
+    left: 12%;
+    bottom: -1.6rem;
   }
 }
