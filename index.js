@@ -38,10 +38,18 @@ function rightSliderF() {
 
 function showNextSlideF() {
   console.log(sliderF);
-  if (sliderF.scrollLeft + sliderF.clientWidth >= sliderF.scrollWidth) {
-    sliderF.scrollLeft = 0;
+  if (window.innerWidth < 768) {
+    if (sliderF.scrollLeft + sliderF.clientWidth >= sliderF.scrollWidth) {
+      sliderF.scrollLeft = 0;
+    } else {
+      sliderF.scrollLeft += 350;
+    }
   } else {
-    sliderF.scrollLeft += 350;
+    if (sliderF.scrollLeft + sliderF.clientWidth >= sliderF.scrollWidth) {
+      sliderF.scrollLeft = 0;
+    } else {
+      sliderF.scrollLeft += 420;
+    }
   }
 }
 
