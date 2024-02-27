@@ -54,3 +54,58 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+const sliderS = document.getElementById("sliderS");
+function leftSlider() {
+  console.log("left");
+  if (sliderS) {
+    sliderS.scrollLeft = sliderS.scrollLeft - 1920;
+  }
+}
+function rightSlider() {
+  console.log("right");
+  if (sliderS) {
+    sliderS.scrollLeft = sliderS.scrollLeft + 1920;
+  }
+}
+
+function showNextSlideS() {
+  if (sliderS.scrollLeft + sliderS.clientWidth >= sliderS.scrollWidth) {
+    sliderS.scrollLeft = 0;
+  } else {
+    sliderS.scrollLeft += 1780;
+  }
+}
+
+setInterval(showNextSlideS, 5000);
+
+function leftSliderF() {
+  console.log("left");
+  if (sliderF) {
+    sliderF.scrollLeft = sliderF.scrollLeft - 1920;
+  }
+}
+function rightSliderF() {
+  console.log("right");
+  if (sliderF) {
+    sliderF.scrollLeft = sliderF.scrollLeft + 1920;
+  }
+}
+
+function showNextSlideF() {
+  console.log(sliderF);
+  if (window.innerWidth < 768) {
+    if (sliderF.scrollLeft + sliderF.clientWidth >= sliderF.scrollWidth) {
+      sliderF.scrollLeft = 0;
+    } else {
+      sliderF.scrollLeft += 340;
+    }
+  } else {
+    if (sliderF.scrollLeft + sliderF.clientWidth >= sliderF.scrollWidth) {
+      sliderF.scrollLeft = 0;
+    } else {
+      sliderF.scrollLeft += 420;
+    }
+  }
+}
+
+setInterval(showNextSlideF, 5000);

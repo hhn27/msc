@@ -42,7 +42,7 @@ function showNextSlideF() {
     if (sliderF.scrollLeft + sliderF.clientWidth >= sliderF.scrollWidth) {
       sliderF.scrollLeft = 0;
     } else {
-      sliderF.scrollLeft += 350;
+      sliderF.scrollLeft += 340;
     }
   } else {
     if (sliderF.scrollLeft + sliderF.clientWidth >= sliderF.scrollWidth) {
