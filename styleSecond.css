@@ -71,6 +71,9 @@ body {
   padding: 3.19rem 6.19rem;
   z-index: -1;
 }
+.skincareTitBlow {
+  display: none;
+}
 .titleTop {
   position: absolute;
   top: -3.7rem;
@@ -101,12 +104,7 @@ body {
   font-weight: 700;
   line-height: 120%; /* 2.4rem */
 }
-.skincareTitBlow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
+
 .skincareTitBlow h2 {
   font-family: ProximaNovaB;
   color: var(--Foundation-Pink-700);
@@ -428,7 +426,7 @@ body {
 }
 .num3::after {
   content: "";
-  width: calc(100vw / 6.6);
+  width: 5.56rem;
   border: 1px dashed #913733;
   top: 49%;
   height: 25.5rem;
@@ -557,7 +555,7 @@ body {
 }
 .contentShare {
   width: 100%;
-  flex-basis: 100%;
+  justify-content: space-around;
   flex: 0 0 auto;
   border-radius: 1.25rem;
   background: #fff8f8;
@@ -640,7 +638,6 @@ body {
 .contentRight {
   display: flex;
   flex-direction: column;
-
   row-gap: 5.72rem;
 }
 .detail span {
@@ -874,7 +871,7 @@ body {
   overflow-x: auto;
 }
 .card {
-  min-width: 21.125rem;
+  /* min-width: 21.125rem; */
   min-height: 31.4375rem;
   position: relative;
   border-radius: 1rem;
@@ -965,14 +962,8 @@ body {
 
 .card {
   min-height: 33.79rem;
-  flex: 0 0 auto;
-  width: calc(25% - 2%);
-  margin-right: 2%;
 }
 
-.card:last-child {
-  margin-right: 0;
-}
 .btnMobile {
   display: none;
 }
@@ -1697,6 +1688,7 @@ body {
     color: var(--Foundation-Pink-600);
     text-align: center;
     font-family: ProximaNovaB;
+    margin: 0 auto;
     font-size: 2rem;
     font-style: normal;
     font-weight: 700;
@@ -1805,7 +1797,7 @@ body {
   }
   .num2::after {
     content: "";
-    width: 2rem;
+    width: 5.5rem;
     border: 1px dashed #913733;
     top: 49%;
     height: 19rem;
@@ -1940,6 +1932,7 @@ body {
   .contentRight {
     width: 100%;
     justify-content: center;
+    row-gap: 1rem;
   }
   .detail {
     width: 100%;
@@ -1967,7 +1960,7 @@ body {
   }
   .iconBtnM {
     background-color: white;
-    padding: 0.6rem 1rem;
+    padding: 0.7rem 0.9rem 0.6rem 1rem;
     border-radius: 50%;
   }
   .shareTitle {

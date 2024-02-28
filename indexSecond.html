@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
     <title>Chi tiết dịch vụ Intensive Care</title>
     <link rel="stylesheet" href="styleSecond.css" />
+    
   </head>
   <body>
     <section class="banner">
@@ -428,6 +433,8 @@
           <span class="dot"></span>
           <span class="dot"></span>
           <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
         </div>
       </div>
     </section>
@@ -620,154 +627,159 @@
         <div class="shareF">
           <h1>Sau khi sử dụng dịch vụ</h1>
           <div class="shareFuntion"> 
-            <div class="icon">
+            <div class="icon swiper-button-prevT " >
               <img src="./assets/icons/next.svg" alt="" onclick="leftSlider()">
             </div>
-            <div class="icon">
+            <div class="icon swiper-button-nextT">
               <img src="./assets/icons/next right.svg" alt="" onclick="rightSlider()">
             </div>
           </div>
         </div>
       </div>
 
-        <div class="containerContent" id="sliderS">
-          <div class="contentShare">
-            <div class="contentLeft">
-               <div class="imgShare">
-                <img src="./assets/img/share.jpg" alt="" class="avatar">
-                <img src="./assets/icons/play.svg" alt="" class="play">
-               </div>
-               <div class="stars">
-                <img src="./assets/icons/Star 1.svg" alt="">
-                <img src="./assets/icons/Star 1.svg" alt="">
-                <img src="./assets/icons/Star 1.svg" alt="">
-                <img src="./assets/icons/Star 1.svg" alt="">
-                <img src="./assets/icons/Star 1.svg" alt="">
-               </div>
-               <div class="info">
-                <div class="infoItem">
-                  <img src="assets/icons/human.svg" alt="">
-                  <div  class="name">
-                    <span>Khách hàng:</span>
-                    <span>Ông Nguyễn Văn ABC</span>
-                  </div>
-                </div>
-                <div  class="infoItem">
-                  <img src="assets/icons/headphone.svg" alt="">
-                  <div class="name">
-                    <span>Bệnh lý:</span>
-                    <span>Viêm khớp dạng thấp</span>
-                  </div>
-                </div>
-              </div>
-               </div>
-               <div class="contentRight">
-                <div class="detail">
-                  <span >Chú bị đau vai hơn 2 năm, đã đi khám và điều trị ở nhiều nơi nhưng không đỡ. Chú đau nhiều, rất khó chị và thường xuyên mất ngủ do đau. Khi đến MSC Clinic điều trị hơn 20 ngày với 4 đợt thì hiện tại chú đã khỏi hẳn, chú cảm thấy rất thoải mái, nhẹ nhàng và rất vui. Giờ ra viện về nhà chú sẽ rất nhớ bác sĩ ở đây. Chú mong sẽ giúp được nhiều người ở quê chú biết đến phương pháp điều trị này.</span>
-                </div>
-                  <div class="buttons">
-                    <div class="btnFirst">Xem thêm</div>
-                    <div class="btnSecond">
-                      <span>Đăng ký thăm khám</span>
-                      <div class="iconBtn">
-                        <img src="./assets/icons/next right.svg" >
-                      </div>
-                    </div>
-                  </div>
-              </div>
+        <div class="containerContent mySwiper" id="slider">
 
-            </div>
-            <div class="contentShare">
-              <div class="contentLeft">
-                 <div class="imgShare">
-                  <img src="./assets/img/share.jpg" alt="" class="avatar">
-                  <img src="./assets/icons/play.svg" alt="" class="play">
-                 </div>
-                 <div class="stars">
-                  <img src="./assets/icons/Star 1.svg" alt="">
-                  <img src="./assets/icons/Star 1.svg" alt="">
-                  <img src="./assets/icons/Star 1.svg" alt="">
-                  <img src="./assets/icons/Star 1.svg" alt="">
-                  <img src="./assets/icons/Star 1.svg" alt="">
-                 </div>
-                 <div class="info">
-                  <div class="infoItem">
-                    <img src="assets/icons/human.svg" alt="">
-                    <div  class="name">
-                      <span>Khách hàng:</span>
-                      <span>Ông Nguyễn Văn ABC</span>
-                    </div>
-                  </div>
-                  <div  class="infoItem">
-                    <img src="assets/icons/headphone.svg" alt="">
-                    <div class="name">
-                      <span>Khách hàng:</span>
-                      <span>Ông Nguyễn Văn ABC</span>
-                    </div>
-                  </div>
-                </div>
-                 </div>
-                 <div class="contentRight">
-                  <div class="detail">
-                    <span >Chú bị đau vai hơn 2 năm, đã đi khám và điều trị ở nhiều nơi nhưng không đỡ. Chú đau nhiều, rất khó chị và thường xuyên mất ngủ do đau. Khi đến MSC Clinic điều trị hơn 20 ngày với 4 đợt thì hiện tại chú đã khỏi hẳn, chú cảm thấy rất thoải mái, nhẹ nhàng và rất vui. Giờ ra viện về nhà chú sẽ rất nhớ bác sĩ ở đây. Chú mong sẽ giúp được nhiều người ở quê chú biết đến phương pháp điều trị này.</span>
-                  </div>
-                    <div class="buttons">
-                      <div class="btnFirst">Xem thêm</div>
-                      <div class="btnSecond">
-                        <span>Đăng ký thăm khám</span>
-                        <div class="iconBtn">
-                          <img src="./assets/icons/next right.svg" >
+                <div class="swiper-wrapper" speed="500" loop="true" auto>
+                  <!-- Slides -->
+                  <div class="swiper-slide"> 
+                    <div class="contentShare">
+                    <div class="contentLeft">
+                       <div class="imgShare">
+                        <img src="./assets/img/share.jpg" alt="" class="avatar">
+                        <img src="./assets/icons/play.svg" alt="" class="play">
+                       </div>
+                       <div class="stars">
+                        <img src="./assets/icons/Star 1.svg" alt="">
+                        <img src="./assets/icons/Star 1.svg" alt="">
+                        <img src="./assets/icons/Star 1.svg" alt="">
+                        <img src="./assets/icons/Star 1.svg" alt="">
+                        <img src="./assets/icons/Star 1.svg" alt="">
+                       </div>
+                       <div class="info">
+                        <div class="infoItem">
+                          <img src="assets/icons/human.svg" alt="">
+                          <div  class="name">
+                            <span>Khách hàng:</span>
+                            <span>Ông Nguyễn Văn ABC</span>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-      
-                </div>
-              </div>
-              <div class="contentShare">
-                <div class="contentLeft">
-                   <div class="imgShare">
-                    <img src="./assets/img/share.jpg" alt="" class="avatar">
-                    <img src="./assets/icons/play.svg" alt="" class="play">
-                   </div>
-                   <div class="stars">
-                    <img src="./assets/icons/Star 1.svg" alt="">
-                    <img src="./assets/icons/Star 1.svg" alt="">
-                    <img src="./assets/icons/Star 1.svg" alt="">
-                    <img src="./assets/icons/Star 1.svg" alt="">
-                    <img src="./assets/icons/Star 1.svg" alt="">
-                   </div>
-                   <div class="info">
-                    <div class="infoItem">
-                      <img src="assets/icons/human.svg" alt="">
-                      <div  class="name">
-                        <span>Khách hàng:</span>
-                        <span>Ông Nguyễn Văn ABC</span>
-                      </div>
-                    </div>
-                    <div  class="infoItem">
-                      <img src="assets/icons/headphone.svg" alt="">
-                      <div class="name">
-                        <span>Khách hàng:</span>
-                        <span>Ông Nguyễn Văn ABC</span>
-                      </div>
-                    </div>
-                  </div>
-                   </div>
-                   <div class="contentRight">
-                    <div class="detail">
-                      <span >Chú bị đau vai hơn 2 năm, đã đi khám và điều trị ở nhiều nơi nhưng không đỡ. Chú đau nhiều, rất khó chị và thường xuyên mất ngủ do đau. Khi đến MSC Clinic điều trị hơn 20 ngày với 4 đợt thì hiện tại chú đã khỏi hẳn, chú cảm thấy rất thoải mái, nhẹ nhàng và rất vui. Giờ ra viện về nhà chú sẽ rất nhớ bác sĩ ở đây. Chú mong sẽ giúp được nhiều người ở quê chú biết đến phương pháp điều trị này.</span>
-                    </div>
-                      <div class="buttons">
-                        <div class="btnFirst">Xem thêm</div>
-                        <div class="btnSecond">
-                          <span>Đăng ký thăm khám</span>
-                          <div class="iconBtn">
-                            <img src="./assets/icons/next right.svg" >
+                        <div  class="infoItem">
+                          <img src="assets/icons/headphone.svg" alt="">
+                          <div class="name">
+                            <span>Bệnh lý:</span>
+                            <span>Viêm khớp dạng thấp</span>
                           </div>
                         </div>
                       </div>
+                       </div>
+                       <div class="contentRight">
+                        <div class="detail">
+                          <span >Chú bị đau vai hơn 2 năm, đã đi khám và điều trị ở nhiều nơi nhưng không đỡ. Chú đau nhiều, rất khó chị và thường xuyên mất ngủ do đau. Khi đến MSC Clinic điều trị hơn 20 ngày với 4 đợt thì hiện tại chú đã khỏi hẳn, chú cảm thấy rất thoải mái, nhẹ nhàng và rất vui. Giờ ra viện về nhà chú sẽ rất nhớ bác sĩ ở đây. Chú mong sẽ giúp được nhiều người ở quê chú biết đến phương pháp điều trị này.</span>
+                        </div>
+                          <div class="buttons">
+                            <div class="btnFirst">Xem thêm</div>
+                            <div class="btnSecond">
+                              <span>Đăng ký thăm khám</span>
+                              <div class="iconBtn">
+                                <img src="./assets/icons/next right.svg" >
+                              </div>
+                            </div>
+                          </div>
+                      </div>
         
-                  </div>
+                    </div></div>
+                    <div class="swiper-slide"> <div class="contentShare">
+                      <div class="contentLeft">
+                         <div class="imgShare">
+                          <img src="./assets/img/share.jpg" alt="" class="avatar">
+                          <img src="./assets/icons/play.svg" alt="" class="play">
+                         </div>
+                         <div class="stars">
+                          <img src="./assets/icons/Star 1.svg" alt="">
+                          <img src="./assets/icons/Star 1.svg" alt="">
+                          <img src="./assets/icons/Star 1.svg" alt="">
+                          <img src="./assets/icons/Star 1.svg" alt="">
+                          <img src="./assets/icons/Star 1.svg" alt="">
+                         </div>
+                         <div class="info">
+                          <div class="infoItem">
+                            <img src="assets/icons/human.svg" alt="">
+                            <div  class="name">
+                              <span>Khách hàng:</span>
+                              <span>Ông Nguyễn Văn ABC</span>
+                            </div>
+                          </div>
+                          <div  class="infoItem">
+                            <img src="assets/icons/headphone.svg" alt="">
+                            <div class="name">
+                              <span>Bệnh lý:</span>
+                              <span>Viêm khớp dạng thấp</span>
+                            </div>
+                          </div>
+                        </div>
+                         </div>
+                         <div class="contentRight">
+                          <div class="detail">
+                            <span >Chú bị đau vai hơn 2 năm, đã đi khám và điều trị ở nhiều nơi nhưng không đỡ. Chú đau nhiều, rất khó chị và thường xuyên mất ngủ do đau. Khi đến MSC Clinic điều trị hơn 20 ngày với 4 đợt thì hiện tại chú đã khỏi hẳn, chú cảm thấy rất thoải mái, nhẹ nhàng và rất vui. Giờ ra viện về nhà chú sẽ rất nhớ bác sĩ ở đây. Chú mong sẽ giúp được nhiều người ở quê chú biết đến phương pháp điều trị này.</span>
+                          </div>
+                            <div class="buttons">
+                              <div class="btnFirst">Xem thêm</div>
+                              <div class="btnSecond">
+                                <span>Đăng ký thăm khám</span>
+                                <div class="iconBtn">
+                                  <img src="./assets/icons/next right.svg" >
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+          
+                      </div></div>
+                      <div class="swiper-slide"> <div class="contentShare">
+                        <div class="contentLeft">
+                           <div class="imgShare">
+                            <img src="./assets/img/share.jpg" alt="" class="avatar">
+                            <img src="./assets/icons/play.svg" alt="" class="play">
+                           </div>
+                           <div class="stars">
+                            <img src="./assets/icons/Star 1.svg" alt="">
+                            <img src="./assets/icons/Star 1.svg" alt="">
+                            <img src="./assets/icons/Star 1.svg" alt="">
+                            <img src="./assets/icons/Star 1.svg" alt="">
+                            <img src="./assets/icons/Star 1.svg" alt="">
+                           </div>
+                           <div class="info">
+                            <div class="infoItem">
+                              <img src="assets/icons/human.svg" alt="">
+                              <div  class="name">
+                                <span>Khách hàng:</span>
+                                <span>Ông Nguyễn Văn ABC</span>
+                              </div>
+                            </div>
+                            <div  class="infoItem">
+                              <img src="assets/icons/headphone.svg" alt="">
+                              <div class="name">
+                                <span>Bệnh lý:</span>
+                                <span>Viêm khớp dạng thấp</span>
+                              </div>
+                            </div>
+                          </div>
+                           </div>
+                           <div class="contentRight">
+                            <div class="detail">
+                              <span >Chú bị đau vai hơn 2 năm, đã đi khám và điều trị ở nhiều nơi nhưng không đỡ. Chú đau nhiều, rất khó chị và thường xuyên mất ngủ do đau. Khi đến MSC Clinic điều trị hơn 20 ngày với 4 đợt thì hiện tại chú đã khỏi hẳn, chú cảm thấy rất thoải mái, nhẹ nhàng và rất vui. Giờ ra viện về nhà chú sẽ rất nhớ bác sĩ ở đây. Chú mong sẽ giúp được nhiều người ở quê chú biết đến phương pháp điều trị này.</span>
+                            </div>
+                              <div class="buttons">
+                                <div class="btnFirst">Xem thêm</div>
+                                <div class="btnSecond">
+                                  <span>Đăng ký thăm khám</span>
+                                  <div class="iconBtn">
+                                    <img src="./assets/icons/next right.svg" >
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+            
+                        </div></div>
                 </div>
         </div>
         <div class="btnMobile">
@@ -822,95 +834,144 @@
           <h1>Các dịch vụ khác</h1>
           <div class="shareFuntion"> 
             <div class="icon">
-              <img src="./assets/icons/next.svg" alt="" onclick="">
+              <img src="./assets/icons/next.svg" alt="" class="swiper-button-prevTT">
             </div>
             <div class="icon">
-              <img src="./assets/icons/next right.svg" alt="" onclick="">
+              <img src="./assets/icons/next right.svg" alt="" onclick="" class="swiper-button-nextTT">
             </div>
           </div>
         </div>
       </div>
-      <div class="containerMore" id="sliderF">
-        <div class="card" >
-          <img src="./assets/img/more.png" alt="" class="bgcard">
-          <div class="cardTitle">
-            <div class="cardTitleT">
-              <span>Dịch vụ</span>
-              <span>Cơ xương khớp</span>
+      <div class="containerMore mySwiperSecond " id="silderF">
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+            <div class="swiper-slide"> 
+                <div class="card" >
+                <img src="./assets/img/more.png" alt="" class="bgcard">
+                <div class="cardTitle">
+                  <div class="cardTitleT">
+                    <span>Dịch vụ</span>
+                    <span>Cơ xương khớp</span>
+                  </div>
+                  <div class="iconWhite">
+                    <img src="./assets/img/rightwhite.svg" alt="" class="rightWhite">
+                    <img src="./assets/img/rightwhite.svg" alt="" class="rightTrans">
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="iconWhite">
-              <img src="./assets/img/rightwhite.svg" alt="" class="rightWhite">
-              <img src="./assets/img/rightwhite.svg" alt="" class="rightTrans">
+            <div class="swiper-slide"> 
+              <div class="card" >
+              <img src="./assets/img/more.png" alt="" class="bgcard">
+              <div class="cardTitle">
+                <div class="cardTitleT">
+                  <span>Dịch vụ</span>
+                  <span>Cơ xương khớp</span>
+                </div>
+                <div class="iconWhite">
+                  <img src="./assets/img/rightwhite.svg" alt="" class="rightWhite">
+                  <img src="./assets/img/rightwhite.svg" alt="" class="rightTrans">
+                </div>
+              </div>
             </div>
-          </div>
+            </div>
+            <div class="swiper-slide"> 
+              <div class="card" >
+              <img src="./assets/img/more.png" alt="" class="bgcard">
+              <div class="cardTitle">
+                <div class="cardTitleT">
+                  <span>Dịch vụ</span>
+                  <span>Cơ xương khớp</span>
+                </div>
+                <div class="iconWhite">
+                  <img src="./assets/img/rightwhite.svg" alt="" class="rightWhite">
+                  <img src="./assets/img/rightwhite.svg" alt="" class="rightTrans">
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="swiper-slide"> 
+              <div class="card" >
+              <img src="./assets/img/more.png" alt="" class="bgcard">
+              <div class="cardTitle">
+                <div class="cardTitleT">
+                  <span>Dịch vụ</span>
+                  <span>Cơ xương khớp</span>
+                </div>
+                <div class="iconWhite">
+                  <img src="./assets/img/rightwhite.svg" alt="" class="rightWhite">
+                  <img src="./assets/img/rightwhite.svg" alt="" class="rightTrans">
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="swiper-slide"> 
+              <div class="card" >
+              <img src="./assets/img/more.png" alt="" class="bgcard">
+              <div class="cardTitle">
+                <div class="cardTitleT">
+                  <span>Dịch vụ</span>
+                  <span>Cơ xương khớp</span>
+                </div>
+                <div class="iconWhite">
+                  <img src="./assets/img/rightwhite.svg" alt="" class="rightWhite">
+                  <img src="./assets/img/rightwhite.svg" alt="" class="rightTrans">
+                </div>
+              </div>
+            </div>
+            </div>
+
         </div>
-        <div class="card">
-          <img src="./assets/img/more.png" alt="" class="bgcard">
-          <div class="cardTitle">
-            <div class="cardTitleT">
-              <span>Dịch vụ</span>
-              <span>Cơ xương khớp</span>
-            </div>
-            <div class="iconWhite">
-              <img src="./assets/img/rightwhite.svg" alt="" class="rightWhite">
-              <img src="./assets/img/rightwhite.svg" alt="" class="rightTrans">
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./assets/img/more.png" alt="" class="bgcard">
-          <div class="cardTitle">
-            <div class="cardTitleT">
-              <span>Dịch vụ</span>
-              <span>Cơ xương khớp</span>
-            </div>
-            <div class="iconWhite">
-              <img src="./assets/img/rightwhite.svg" alt="" class="rightWhite">
-              <img src="./assets/img/rightwhite.svg" alt="" class="rightTrans">
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./assets/img/more.png" alt="" class="bgcard">
-          <div class="cardTitle">
-            <div class="cardTitleT">
-              <span>Dịch vụ</span>
-              <span>Cơ xương khớp</span>
-            </div>
-            <div class="iconWhite">
-              <img src="./assets/img/rightwhite.svg" alt="" class="rightWhite">
-              <img src="./assets/img/rightwhite.svg" alt="" class="rightTrans">
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./assets/img/more.png" alt="" class="bgcard">
-          <div class="cardTitle">
-            <div class="cardTitleT">
-              <span>Dịch vụ</span>
-              <span>Cơ xương khớp</span>
-            </div>
-            <div class="iconWhite">
-              <img src="./assets/img/rightwhite.svg" alt="" class="rightWhite">
-              <img src="./assets/img/rightwhite.svg" alt="" class="rightTrans">
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <img src="./assets/img/more.png" alt="" class="bgcard">
-          <div class="cardTitle">
-            <div class="cardTitleT">
-              <span>Dịch vụ</span>
-              <span>Cơ xương khớp</span>
-            </div>
-            <div class="iconWhite">
-              <img src="./assets/img/rightwhite.svg" alt="" class="rightWhite">
-              <img src="./assets/img/rightwhite.svg" alt="" class="rightTrans">
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   </body>
   <script src="./indexSecond.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,      
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-nextT',
+        prevEl: '.swiper-button-prevT',
+      },
+    });
+    var swiperSe = new Swiper(".mySwiperSecond", {
+      slidesPerView: 4,
+      spaceBetween: 20,   
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      navigation: {
+        nextEl: '.swiper-button-nextTT',
+        prevEl: '.swiper-button-prevTT',
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      },
+    });
+  </script>
 </html>
