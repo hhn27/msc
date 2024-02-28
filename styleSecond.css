@@ -71,6 +71,10 @@ body {
   padding: 3.19rem 6.19rem;
   z-index: -1;
 }
+.outstanding {
+  max-width: 100rem;
+  margin: 0 auto;
+}
 .skincareTitBlow {
   display: none;
 }
@@ -144,7 +148,7 @@ body {
 .outItem {
   position: relative;
   cursor: pointer;
-  max-width: 28.0625rem;
+  /* max-width: 28.0625rem; */
   height: 100%;
   width: 100%;
   height: 16.8125rem;
@@ -153,7 +157,7 @@ body {
   overflow: hidden;
   padding: 2.19rem 2rem;
   background: linear-gradient(
-    172deg,
+    180deg,
     rgba(255, 255, 255, 1) 0%,
     rgba(255, 255, 255, 0) 100%
   );
@@ -164,11 +168,11 @@ body {
 }
 .outItem .outContent {
   transition: 0.5s ease-in-out;
-  opacity: 0;
+  display: none;
 }
 .outItem:hover .outContent {
   transition: 0.5s ease-in-out;
-  opacity: 1;
+  display: block;
 }
 .outItem:hover .outHeader {
   transition: 0.5s ease-in-out;
@@ -210,7 +214,6 @@ body {
   z-index: 100;
 }
 .outContent {
-  transform: translateY(10rem);
   color: white;
   font-family: ProximaNovaR;
   font-size: 1.2rem;
@@ -228,9 +231,11 @@ body {
 }
 .funtion {
   display: grid;
+  max-width: 100rem;
+  margin: 0 auto;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: minmax(100px, 80vh);
-  padding: 8rem 6.47rem;
+  grid-auto-rows: minmax(100px, 49.35rem);
+  padding: 8rem 0;
   column-gap: 6rem;
 }
 .function > :nth-child(2) {
@@ -247,6 +252,7 @@ body {
   justify-content: space-between;
 }
 .right {
+  object-fit: contain;
   width: 100%;
   height: 100%;
 }
@@ -263,6 +269,9 @@ body {
 .fItemHeader {
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 1.25rem;
 }
 .fItemHeader span {
   color: var(--Foundation-Pink-500);
@@ -274,7 +283,7 @@ body {
   letter-spacing: -0.0125rem;
 }
 .funtionItem {
-  padding: 1rem 1.25rem;
+  max-width: 40.875rem;
   border-radius: 0.5rem;
   width: 100%;
   border: 1px solid var(--Foundation-Pink-200);
@@ -283,7 +292,6 @@ body {
     #ffffff -36.53%,
     rgba(254, 239, 238, 0) 121.85%
   );
-  padding: 0.81rem 1rem;
 }
 .funtionItem.show {
   background: #feefee;
@@ -298,6 +306,8 @@ body {
 }
 .fItemContent {
   display: flex;
+
+  padding: 0 1rem 1.25rem;
   flex-direction: column;
   row-gap: 0.5rem;
   margin-top: 1rem;
@@ -332,6 +342,8 @@ body {
 }
 .mapSkincare {
   display: grid;
+  max-width: 100rem;
+  margin: 0 auto;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 2.31rem;
   row-gap: 2.25rem;
@@ -350,7 +362,43 @@ body {
   height: 15.28856rem;
   border-radius: 50%;
   overflow: hidden;
+}
+.itemimg1 {
   background-image: url("./assets/img/washbg.jpg");
+  object-fit: fill;
+}
+.itemimg2 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./assets/img/washbg2.jpg");
+}
+
+.itemimg3 {
+  background-image: url("./assets/img/washbg3.jpg");
+}
+.itemimg4 {
+  background-image: url("./assets/img/washbg4.jpg");
+}
+.itemimg5 {
+  background-image: url("./assets/img/washbg5.jpg");
+}
+.itemimg6 {
+  background-image: url("./assets/img/washbg6.jpg");
+}
+.itemimg7 {
+  background-image: url("./assets/img/washbg7.jpg");
+}
+.itemimg8 {
+  background-image: url("./assets/img/washbg8.jpg");
+}
+.itemimg9 {
+  background-image: url("./assets/img/washbg9.jpg");
+}
+.itemimg10 {
+  background-image: url("./assets/img/washbg10.jpg");
+}
+.itemimg11 {
+  background-image: url("./assets/img/washbg11.jpg");
 }
 .mapItemImg img {
   width: 15.28856rem;
@@ -412,14 +460,14 @@ body {
 
 .num1::after {
   content: "";
-  width: calc(100vw / 6.6);
+  width: calc(100vw / 7.6);
   position: absolute;
   left: 110%;
   border: 1px dashed #913733;
 }
 .num2::after {
   content: "";
-  width: calc(100vw / 6.6);
+  width: calc(100vw / 7.6);
   position: absolute;
   left: 101%;
   border: 1px dashed #913733;
@@ -438,21 +486,21 @@ body {
 }
 .num4::after {
   content: "";
-  width: calc(100vw / 6.6);
+  width: calc(100vw / 7.6);
   position: absolute;
   right: 101%;
   border: 1px dashed #913733;
 }
 .num5::after {
   content: "";
-  width: calc(100vw / 6.6);
+  width: calc(100vw / 7.6);
   position: absolute;
   right: 101%;
   border: 1px dashed #913733;
 }
 .num6::after {
   content: "";
-  width: calc(100vw / 6.6);
+  width: calc(100vw / 7.6);
   position: absolute;
   right: 101%;
   border: 1px dashed #913733;
@@ -478,21 +526,24 @@ body {
 }
 .num10::after {
   content: "";
-  width: calc(100vw / 6.6);
+  width: calc(100vw / 7.6);
   position: absolute;
   right: 101%;
   border: 1px dashed #913733;
 }
 .num11::after {
   content: "";
-  width: calc(100vw / 6.6);
+  width: calc(100vw / 7.6);
   position: absolute;
   right: 101%;
   border: 1px dashed #913733;
 }
 /* share */
 .share {
-  padding: 6.06rem 6.37rem;
+  max-width: 100rem;
+  margin: 0 auto;
+  margin-top: 5.62rem;
+  margin-bottom: 5.62rem;
 }
 .shareTitle {
   display: flex;
@@ -542,11 +593,9 @@ body {
 
 .containerContent {
   width: 100%;
-  display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  column-gap: 5rem;
 }
 .containerContent::-webkit-scrollbar {
   display: none;
@@ -702,7 +751,9 @@ body {
   background-color: white;
 }
 .form {
-  padding: 4rem 5.62rem;
+  max-width: 100rem;
+  margin: 0 auto;
+  margin-bottom: 5.62rem;
   display: flex;
   justify-content: space-between;
   column-gap: 5rem;
@@ -822,7 +873,8 @@ body {
   background-color: #d9524d;
 }
 .more {
-  padding: 1.38rem 6.38rem;
+  max-width: 100rem;
+  margin: 0 auto;
 }
 .moreTitle {
   display: flex;
@@ -864,6 +916,7 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  user-select: none;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -871,7 +924,6 @@ body {
   overflow-x: auto;
 }
 .card {
-  /* min-width: 21.125rem; */
   min-height: 31.4375rem;
   position: relative;
   border-radius: 1rem;
@@ -959,7 +1011,11 @@ body {
   scroll-behavior: smooth;
   justify-content: flex-start;
 }
-
+.mySwiperSecond::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 .card {
   min-height: 33.79rem;
 }
@@ -1480,6 +1536,9 @@ body {
   }
 }
 @media only screen and (max-width: 768px) {
+  .outContent {
+    display: block;
+  }
   .banner {
     width: 100%;
     height: 50vh;
@@ -1631,8 +1690,8 @@ body {
     top: 0;
     right: 0;
   }
-  .outContent {
-    opacity: 1 !important;
+  .outItem .outContent {
+    display: block;
     color: #d9524d;
     transform: none;
     text-align: justify;
@@ -1711,6 +1770,7 @@ body {
   }
   .funtionItem {
     border-radius: 0.5rem;
+    margin: 0 auto;
     width: 100%;
     border: 1px solid var(--Foundation-Pink-200);
     background: linear-gradient(
@@ -1773,7 +1833,6 @@ body {
     height: 8.55706rem;
     border-radius: 50%;
     overflow: hidden;
-    background-image: url("./assets/img/washbg.jpg");
     background-size: cover;
   }
   .mapSkincare {
@@ -1911,9 +1970,7 @@ body {
   .shareFuntion {
     display: none;
   }
-  .share {
-    padding: 5.44rem 1rem;
-  }
+
   .containerContent {
     width: 100%;
   }

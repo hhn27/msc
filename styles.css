@@ -525,12 +525,9 @@ html {
 }
 
 .containerContent {
-  width: 87.3125rem;
-  display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  column-gap: 5rem;
 }
 .containerContent::-webkit-scrollbar {
   display: none;
