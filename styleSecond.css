@@ -14,6 +14,7 @@ body {
   position: relative;
   z-index: -100;
 }
+
 * {
   padding: 0;
   margin: 0;
@@ -58,7 +59,7 @@ body {
 }
 .link a:last-child {
   color: var(--PRIMARY-blue-500);
-  font-family: ProximaNovaSB;
+  font-family: ProximaNovaR;
   font-size: 1rem;
   font-style: normal;
   font-weight: 700;
@@ -73,6 +74,7 @@ body {
 }
 .outstanding {
   max-width: 100rem;
+  padding: 6.06rem 6.37rem;
   margin: 0 auto;
 }
 .skincareTitBlow {
@@ -80,7 +82,7 @@ body {
 }
 .titleTop {
   position: absolute;
-  top: -3.7rem;
+  top: -4.3rem;
   left: 30%;
   color: var(--Foundation-Pink-50);
   text-align: center;
@@ -234,9 +236,9 @@ body {
   max-width: 100rem;
   margin: 0 auto;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: minmax(100px, 49.35rem);
-  padding: 8rem 0;
   column-gap: 6rem;
+  padding: 6.06rem 6.37rem;
+  padding-top: 8rem;
 }
 .function > :nth-child(2) {
   align-self: start;
@@ -271,7 +273,7 @@ body {
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  padding: 1rem 1.25rem;
+  padding: 1rem 2.25rem;
 }
 .fItemHeader span {
   color: var(--Foundation-Pink-500);
@@ -283,7 +285,6 @@ body {
   letter-spacing: -0.0125rem;
 }
 .funtionItem {
-  max-width: 40.875rem;
   border-radius: 0.5rem;
   width: 100%;
   border: 1px solid var(--Foundation-Pink-200);
@@ -306,24 +307,24 @@ body {
 }
 .fItemContent {
   display: flex;
-
-  padding: 0 1rem 1.25rem;
   flex-direction: column;
+  overflow: hidden;
   row-gap: 0.5rem;
-  margin-top: 1rem;
-  transition: 2s ease-in-out;
-  visibility: hidden;
-  display: none;
-  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  height: 0;
 }
 .fItemContent.show {
-  transition: 2s ease-in-out;
-  visibility: visible;
+  transition: 0.5s ease-in-out;
   display: flex;
-  opacity: 1;
+  height: 14rem;
+  max-height: 14rem;
+  padding: 1rem 2.25rem;
+  transition: all 1s ease-in-out;
+  padding-bottom: 2rem;
 }
 .fItemContent strong {
   color: var(--Foundation-Pink-800);
+  transition: all 0.5s ease-in-out;
   text-align: justify;
   font-family: ProximaNovaB;
   font-size: 1rem;
@@ -333,6 +334,7 @@ body {
 }
 .fItemContent span {
   color: var(--Foundation-Pink-800);
+  transition: all 0.5s ease-in-out;
   text-align: justify;
   font-family: ProximaNovaR;
   font-size: 1rem;
@@ -540,10 +542,9 @@ body {
 }
 /* share */
 .share {
+  padding: 6.06rem 6.37rem;
   max-width: 100rem;
   margin: 0 auto;
-  margin-top: 5.62rem;
-  margin-bottom: 5.62rem;
 }
 .shareTitle {
   display: flex;
@@ -592,10 +593,10 @@ body {
 }
 
 .containerContent {
-  width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
   scroll-behavior: smooth;
+  column-gap: 5rem;
 }
 .containerContent::-webkit-scrollbar {
   display: none;
@@ -609,7 +610,6 @@ body {
   border-radius: 1.25rem;
   background: #fff8f8;
   display: flex;
-  justify-content: space-around;
   padding: 3.72rem 6.89rem;
   column-gap: 1rem;
 }
@@ -687,6 +687,7 @@ body {
 .contentRight {
   display: flex;
   flex-direction: column;
+
   row-gap: 5.72rem;
 }
 .detail span {
@@ -750,6 +751,103 @@ body {
   height: 2rem;
   background-color: white;
 }
+.form {
+  padding: 4rem 5.62rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 5rem;
+}
+/* calender */
+.calendar-box {
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 0.75rem 1.25rem;
+  background: #fff8f8;
+  outline: none;
+  border-radius: 999px;
+  border: none;
+  width: 100%;
+}
+
+.calendar-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.calendar {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 10;
+  display: none;
+}
+
+.header {
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#prevBtn,
+#nextBtn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#monthYear {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
+}
+
+.day {
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.day.current {
+  background-color: #3498db;
+  color: white;
+}
+
+.day.selected {
+  background-color: #2ecc71;
+  color: white;
+}
+
+#dateInput {
+  display: flex;
+  justify-content: space-between;
+  color: #828282;
+  font-family: ProximaNovaR;
+  font-size: 0.7rem;
+  font-style: normal;
+  line-height: 150%;
+  align-items: center;
+}
+.dateInputValue {
+  width: 100%;
+}
+/* calender */
 .form {
   max-width: 100rem;
   margin: 0 auto;
@@ -874,6 +972,7 @@ body {
 }
 .more {
   max-width: 100rem;
+  padding: 6.06rem 6.37rem;
   margin: 0 auto;
 }
 .moreTitle {
@@ -1110,6 +1209,12 @@ body {
   .titleTop {
     left: 25%;
   }
+  .funtion {
+    padding: 3.14rem 6.14rem;
+  }
+  .fItemContent.show {
+    height: 15rem;
+  }
   .num1::after {
     content: "";
     width: calc(100vw / 9);
@@ -1190,10 +1295,17 @@ body {
     right: 120%;
     border: 1px dashed #913733;
   }
+  .function {
+    padding: 0 6.19rem;
+  }
 }
 @media only screen and (max-width: 1300px) {
   .titleTop {
     left: 25%;
+  }
+  .fItemContent.show {
+    height: 18rem;
+    max-height: none;
   }
   .num1::after {
     content: "";
@@ -1348,6 +1460,10 @@ body {
   }
 }
 @media only screen and (max-width: 1100px) {
+  .fItemContent.show {
+    height: 20rem;
+    max-height: none;
+  }
   .titleTop {
     left: 15%;
   }
@@ -1528,6 +1644,10 @@ body {
   .titleTop {
     left: 10%;
   }
+  .fItemContent.show {
+    height: fit-content;
+    max-height: none;
+  }
 }
 
 @media only screen and (max-width: 878px) {
@@ -1637,6 +1757,7 @@ body {
   }
   .outstanding {
     margin-top: 4rem;
+    padding: 3.12rem 1rem;
   }
   .outTitle {
     color: var(--Foundation-Pink-600);
@@ -1804,6 +1925,7 @@ body {
   .fItemContent.show {
     transition: 2s ease-in-out;
     visibility: visible;
+    height: 12rem;
     display: flex;
     opacity: 1;
   }
@@ -1970,7 +2092,9 @@ body {
   .shareFuntion {
     display: none;
   }
-
+  .share {
+    padding: 3.37rem 1rem;
+  }
   .containerContent {
     width: 100%;
   }

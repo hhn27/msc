@@ -448,7 +448,7 @@
               <span>Glow shine</span>
               <img src="./assets/icons/down.svg" alt="" class="iconDown" />
             </div>
-            <div class="fItemContent w3-animate-bottom">
+            <div class="fItemContent">
               <span
                 ><strong>
                   <img src="./assets/icons/Vector.svg" alt="" /> Phù
@@ -629,15 +629,14 @@
           <h1>Sau khi sử dụng dịch vụ</h1>
           <div class="shareFuntion"> 
             <div class="icon swiper-button-prevT " >
-              <img src="./assets/icons/next.svg" alt="" onclick="leftSlider()">
+              <img src="./assets/icons/next.svg" alt="">
             </div>
             <div class="icon swiper-button-nextT">
-              <img src="./assets/icons/next right.svg" alt="" onclick="rightSlider()">
+              <img src="./assets/icons/next right.svg" alt="">
             </div>
           </div>
         </div>
       </div>
-
         <div class="containerContent mySwiper" id="slider">
 
                 <div class="swiper-wrapper" speed="500" loop="true" auto>
@@ -649,29 +648,33 @@
                         <img src="./assets/img/share.jpg" alt="" class="avatar">
                         <img src="./assets/icons/play.svg" alt="" class="play">
                        </div>
-                       <div class="stars">
-                        <img src="./assets/icons/Star 1.svg" alt="">
-                        <img src="./assets/icons/Star 1.svg" alt="">
-                        <img src="./assets/icons/Star 1.svg" alt="">
-                        <img src="./assets/icons/Star 1.svg" alt="">
-                        <img src="./assets/icons/Star 1.svg" alt="">
+                       <div class="infoBottom">
+                        <div class="stars">
+                          <img src="./assets/icons/Star 1.svg" alt="">
+                          <img src="./assets/icons/Star 1.svg" alt="">
+                          <img src="./assets/icons/Star 1.svg" alt="">
+                          <img src="./assets/icons/Star 1.svg" alt="">
+                          <img src="./assets/icons/Star 1.svg" alt="">
+                         </div>
+                         <div class="info">
+                          <div class="infoItem">
+                            <img src="assets/icons/human.svg" alt="">
+                            <div  class="name">
+                              <span>Khách hàng:</span>
+                              <span>Nguyễn Văn ABC</span>
+                            </div>
+                          </div>
+                          <div  class="infoItem">
+                            <img src="assets/icons/headphone.svg" alt="">
+                            <div class="name">
+                              <span>Bệnh lý:</span>
+                              <span>Viêm khớp dạng thấp</span>
+                            </div>
+                          </div>
+                        </div>  
                        </div>
-                       <div class="info">
-                        <div class="infoItem">
-                          <img src="assets/icons/human.svg" alt="">
-                          <div  class="name">
-                            <span>Khách hàng:</span>
-                            <span>Ông Nguyễn Văn ABC</span>
-                          </div>
-                        </div>
-                        <div  class="infoItem">
-                          <img src="assets/icons/headphone.svg" alt="">
-                          <div class="name">
-                            <span>Bệnh lý:</span>
-                            <span>Viêm khớp dạng thấp</span>
-                          </div>
-                        </div>
-                      </div>
+                     
+       
                        </div>
                        <div class="contentRight">
                         <div class="detail">
@@ -789,7 +792,6 @@
             <img src="./assets/icons/next right.svg" >
           </div>
         </div>
-
       </div>
     </section>
     <section class="form">
@@ -814,7 +816,20 @@
             <option value="">b</option>
           </select>
           <div style="display: flex;column-gap: 1rem;">
-            <input type="date" id="start" value="2023-02-23" min="2018-01-01" max="2030-12-31" />
+            <div class="calendar-box">
+              <div id="dateInput">
+                <div id="dateInputValue">Ngày thăm khám</div>
+                <img src="./assets/icons/Calendar.svg" alt="">
+              </div>
+              <div class="calendar" id="calendar">
+                <div class="header">
+                  <button id="prevBtn">&lt;</button>
+                  <h2 id="monthYear">Month Year</h2>
+                  <button id="nextBtn">&gt;</button>
+                </div>
+                <div class="days" id="daysContainer"></div>
+              </div>
+            </div>
             <input type="text" name="" id="" placeholder="Mã giới thiệu">
           </div>
         </div>
