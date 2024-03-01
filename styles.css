@@ -251,7 +251,7 @@ html {
   height: 31.521rem;
   border-radius: 50%;
   background-size: cover;
-  background-image: url("/assets/img/bgDes.jpg");
+  background-image: url("./assets/img/bgDes.jpg");
 }
 .desBot {
   display: flex;
