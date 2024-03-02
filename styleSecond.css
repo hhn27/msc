@@ -287,6 +287,9 @@ html{
   height: 100%;
   padding: 1rem 2.25rem;
 }
+.fItemHeader img{
+  cursor: pointer;
+}
 .fItemHeader span {
   color: var(--Foundation-Pink-500);
   font-family: ProximaNovaB;
@@ -604,6 +607,59 @@ html{
   height: 3rem;
   border-radius: 50%;
   border: 1px solid #d9524d;
+}
+.shareFuntion .icon{
+  transition: all 400ms;
+}
+.shareFuntion .icon svg{
+  width: 25%;
+  height: auto;
+}
+.shareFuntion .icon svg path{
+  transition: all 400ms;
+}
+.shareFuntion .icon:hover{
+  background-color: #d9524d;
+}
+.shareFuntion .icon:hover svg path{
+  stroke: #fff;
+}
+#dateInputValue{
+  font-size: 13px;
+}
+.containerMore .swiper-slide a{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.btnSecond .iconBtn img{
+  width: 20%;
+  transition: all 400ms;
+}
+.btnSecond .iconBtn{
+  position: relative;
+  overflow: hidden;
+}
+.btnSecond .iconBtnHover{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-100%);
+  transition: all 400ms;
+}
+.btnSecond .iconBtnHover img{
+  width: 20%;
+}
+.btnSecond:hover .iconBtn .iconBtnHover{
+  transform: translateX(0);
+}
+.btnSecond:hover .iconBtn>img{
+  transform: translateX(2rem);
 }
 
 .containerContent {
@@ -1149,6 +1205,9 @@ html{
 .btnMobile {
   display: none;
 }
+.containerContent .swiper-pagination{
+  display: none;
+}
 /* responsive */
 @media only screen and (max-width: 1750px) {
   .num1::after {
@@ -1686,6 +1745,12 @@ html{
   html{
     font-size: medium;
   }
+  .containerContent .swiper-pagination{
+    display: block;
+  }
+  .mapItem:last-child{
+    margin-left: -50%;
+  }
   .number img{
     display: none;
   }
@@ -1908,6 +1973,7 @@ html{
     font-size: 2.5rem;
     text-align: center;
     line-height: 1;
+    margin-bottom: 1.75rem;
   }
   .dot.active {
     background: #d9524d;
@@ -1974,6 +2040,7 @@ html{
   }
   .funtionItem.show {
     background: #feefee;
+    padding-bottom: 1.25rem;
   }
   .iconDown {
     transform: rotate(180deg);
@@ -1988,18 +2055,23 @@ html{
     flex-direction: column;
     row-gap: 0.5rem;
     margin-top: 1rem;
-    transition: 2s ease-in-out;
-    visibility: hidden;
+    transition: 500ms all ease-in-out;
+    max-height: 0;
+    height: 0px;
+    overflow: hidden;
+    /* visibility: hidden;
     display: none;
-    opacity: 0;
+    opacity: 0; */
   }
   .fItemContent.show {
-    transition: 2s ease-in-out;
+    /* transition: 2s ease-in-out; */
     visibility: visible;
-    height: fit-content;
+    max-height: 100rem;
     display: flex;
-    opacity: 1;
     padding: 0;
+    height: 100%;
+    /* opacity: 1;
+    padding: 0; */
   }
   .shareF h2{
     font-size: 2rem;
@@ -2148,15 +2220,16 @@ html{
   }
   .num10::after {
     content: "";
-    width: 5rem;
+    width: 7rem;
     border: 1px dashed #913733;
     top: 49%;
-    height: 19rem;
+    height: 15.75rem;
     border-top-right-radius: 1rem;
     border-bottom-right-radius: 1rem;
     position: absolute;
     border-left: none;
-    left: 104%;
+    left: -150%;
+    z-index: -1;
   }
   .num11::after {
     content: "";
@@ -2172,6 +2245,8 @@ html{
   }
   .containerContent {
     width: 100%;
+    position: relative;
+    padding-bottom: 3.5rem;
   }
   .containerContent .contentShare {
     width: 100%;
@@ -2179,6 +2254,28 @@ html{
     flex-direction: column;
     row-gap: 1rem;
     padding: 1rem;
+    background: rgba(255, 252, 252, 1);
+    padding-bottom: 1.5rem;
+  }
+  .containerContent .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 2rem;
+    background-color: rgba(217, 82, 77, 1);
+    border-radius: 1rem;
+  }
+  .containerContent .swiper-pagination-bullet {
+    background-color: rgba(255, 184, 182, 1);
+  }
+  .cardTitleT span:last-child{
+    font-size: 1.1rem;
+  }
+  .detail span{
+    font-size: 1.1rem;
+  }
+  .detail{
+    height: fit-content;
+  }
+  .buttons{
+    margin-top: 0;
   }
   .contentLeft {
     width: 100%;
@@ -2214,11 +2311,13 @@ html{
     border-radius: 999px;
     color: white;
     font-size: 1rem;
+    margin-top: 2rem;
   }
   .iconBtnM {
     background-color: white;
     padding: 0.7rem 0.9rem 0.6rem 1rem;
     border-radius: 50%;
+    display: flex;
   }
   .shareTitle {
     display: flex;
@@ -2472,7 +2571,7 @@ html{
   }
   .num10::after {
     content: "";
-    width: 2rem;
+    width: 7rem;
     border: 1px dashed #913733;
     top: 49%;
     height: 15.75rem;
@@ -2480,7 +2579,8 @@ html{
     border-bottom-right-radius: 1rem;
     position: absolute;
     border-left: none;
-    left: 104%;
+    left: -150%;
+    z-index: -1;
   }
   .num11::after {
     content: "";

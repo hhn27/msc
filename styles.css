@@ -163,7 +163,7 @@ html {
 .halfLeftItem2 {
   display: flex;
   position: absolute;
-  left: -18rem;
+  left: -17rem;
   top: 46%;
   min-width: 20rem;
   text-align: right;
@@ -176,7 +176,7 @@ html {
   display: flex;
   position: absolute;
   text-align: right;
-  left: -15rem;
+  left: -13rem;
   bottom: 2rem;
   min-width: 20rem;
   width: 100%;
@@ -200,7 +200,7 @@ html {
   display: flex;
   position: absolute;
   flex-direction: row-reverse;
-  right: -17.5rem;
+  right: -17rem;
   top: 46%;
   min-width: 20rem;
   text-align: left;
@@ -216,7 +216,7 @@ html {
   text-align: left;
   right: -15.5rem;
   bottom: 2rem;
-  min-width: 20rem;
+  min-width: 22rem;
   width: 100%;
   align-items: center;
   /* column-gap: 1.5rem; */
@@ -227,6 +227,71 @@ html {
 }
 .halfRight .processItem img{
   margin-right: 1.18rem;
+}
+
+.shareFuntion .icon{
+  transition: all 400ms;
+}
+.shareFuntion .icon svg{
+  width: 25%;
+  height: auto;
+}
+.shareFuntion .icon svg path{
+  transition: all 400ms;
+}
+.shareFuntion .icon:hover{
+  background-color: #d9524d;
+}
+.shareFuntion .icon:hover svg path{
+  stroke: #fff;
+}
+.formLeft{
+  position: relative;
+}
+.formLeft::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4.6875rem;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 35.85%, #fff 70.3%);
+}
+.containerMore .swiper-slide a{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#dateInputValue{
+  font-size: 13px;
+}
+.btnSecond .iconBtn img{
+  transition: all 400ms;
+}
+.btnSecond .iconBtn{
+  position: relative;
+  overflow: hidden;
+}
+.btnSecond .iconBtnHover{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-100%);
+  transition: all 400ms;
+}
+.btnSecond .iconBtnHover img{
+  width: 20%;
+}
+.btnSecond:hover .iconBtn .iconBtnHover{
+  transform: translateX(0);
+}
+.btnSecond:hover .iconBtn>img{
+  transform: translateX(2rem);
 }
 
 .halfRight span {
@@ -251,7 +316,7 @@ html {
   height: 31.521rem;
   border-radius: 50%;
   background-size: cover;
-  background-image: url("./assets/img/bgDes.jpg");
+  background-image: url("./assets/img/proBg.png");
 }
 .desBot {
   display: flex;
@@ -1166,14 +1231,34 @@ html {
 .mySwiper .swiper-pagination{
   display: none;
 }
+.containerContent .swiper-pagination{
+  display: none;
+}
 @media only screen and (max-width: 768px) {
+  .containerContent .swiper-pagination{
+    display: block;
+  }
   html {
     font-size: medium;
+  }
+  .advisory .listAdv{
+    row-gap: 0;
+  }
+  .listAdvItem{
+    max-height: fit-content;
+  }
+  .listAdvItem:not(:last-child){
+    border-bottom: 1px solid rgba(255, 255, 255, 1);
+    padding-bottom: 1.25rem;
+    margin-bottom: 1.25rem;
   }
   .banner {
     background-image: url("./assets/img/bgBannerMb.jpg");
     height: 80vh;
     padding: 1.25rem 1.13rem;
+  }
+  .moreF h2{
+    font-size: 2rem;
   }
   .link1 {
     color: #1e60c1;
@@ -1247,7 +1332,7 @@ html {
     flex-direction: column;
     align-self: start;
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
     row-gap: 1rem;
   }
   .itemM {
@@ -1396,12 +1481,15 @@ html {
     max-height: 0;
     height: 0;
     overflow: hidden;
-    transition: 0.5s ease-in-out;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-property: all;
   }
   .iconSM {
     background-color: transparent;
     border-radius: 50%;
     transform: rotate(180deg);
+    flex-shrink: 0;
     transition: 0.5s ease-in-out;
   }
   .iconSM.show {
@@ -1418,7 +1506,7 @@ html {
     display: flex;
     padding: 2rem 1rem;
     height: 100%;
-    max-height: fit-content;
+    max-height: 40rem;
   }
   .text {
     max-width: 60%;
@@ -1480,10 +1568,30 @@ html {
     display: none;
   }
   .share {
-    padding: 5.44rem 1rem;
+    padding: 3.44rem 1rem;
+  }
+  .contentShare{
+    background: rgba(255, 252, 252, 1);
   }
   .containerContent {
     width: 100%;
+    position: relative;
+    padding-bottom: 3.5rem;
+  }
+  .containerContent .swiper-pagination-bullet.swiper-pagination-bullet-active{
+    width: 2rem;
+    background-color: rgba(217, 82, 77, 1);
+    border-radius: 1rem;
+  }
+  .containerContent .swiper-pagination-bullet{
+    background-color: rgba(255, 184, 182, 1);
+  }
+  .detail span{
+    font-size: 1.1rem;
+    text-align: left;
+  }
+  .formRight h2{
+    font-size: 2rem;
   }
   .containerContent .contentShare {
     width: 100%;
@@ -1493,6 +1601,10 @@ html {
     padding: 1rem;
     height: fit-content;
     width: 100%;
+    padding-top: 0;
+  }
+  .cardTitleT span:last-child{
+    font-size: 1.1rem;
   }
   .contentShare .imgShare {
     width: 15.6875rem;
@@ -1554,11 +1666,13 @@ html {
     border-radius: 999px;
     color: white;
     font-size: 1rem;
+    margin-top: 2rem;
   }
   .iconBtnM {
     background-color: white;
     padding: 0.7rem 0.9rem 0.6rem 1rem;
     border-radius: 50%;
+    display: flex;
   }
   .shareTitle {
     display: flex;
@@ -1703,6 +1817,7 @@ html {
   }
   .cardTitle{
     padding: 0.75rem;
+    padding-bottom: 0;
     bottom: 8%;
     align-items: flex-end;
   }
@@ -1713,11 +1828,11 @@ html {
     top: 2rem;
   }
   .halfLeftItem2 {
-    left: -18rem;
+    left: -17rem;
     top: 40%;
   }
   .halfLeftItem3 {
-    left: -15rem;
+    left: -13rem;
     bottom: 2rem;
   }
   .halfRightItem1 {
@@ -1725,7 +1840,7 @@ html {
     top: 2rem;
   }
   .halfRightItem2 {
-    right: -17.5rem;
+    right: -17rem;
     top: 40%;
   }
   .halfRightItem3 {
