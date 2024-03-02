@@ -2242,6 +2242,7 @@ html{
   }
   .share {
     padding: 3.37rem 1rem;
+    background: linear-gradient(180deg, rgba(255, 248, 248, 0) 0%, rgba(255, 248, 248, 1) 20%);
   }
   .containerContent {
     width: 100%;
@@ -2348,6 +2349,10 @@ html{
   }
   .form {
     padding: 1rem;
+    background-color: rgba(255, 248, 248, 1);
+  }
+  .detailFormLeft input, .detailFormLeft select, .calendar-box, .detailFormRight textarea {
+    background: #fff;
   }
   .formLeft {
     display: none;
